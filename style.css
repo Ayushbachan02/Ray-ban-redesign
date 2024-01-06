@@ -1,3 +1,14 @@
+@font-face {
+    font-family: GR;
+    src: url(./Fonts/Gilroy-Regular.ttf);
+}
+
+@font-face {
+    font-family: "GM";
+    src: url(./Fonts/Gilroy-Medium.ttf);
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -31,6 +42,35 @@ html,body{
 }
 
 #workingarea{
-    width: 100%;
+    margin: 0 auto;
+    width: 80%;
+    height: 100vh;
     max-width: 1920px;
+    border: 1px dotted red;
+}
+
+
+nav{
+    width: 100%;
+    padding: 30px 0;
+}
+nav img{
+    height: 60px;
+
+}
+
+#nleft{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#nleft a{
+    color: white;
+    font-family: "GM";
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
