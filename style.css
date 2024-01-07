@@ -1,5 +1,5 @@
 @font-face {
-    font-family: GR;
+    font-family: "GR";
     src: url(./Fonts/Gilroy-Regular.ttf);
 }
 
@@ -13,6 +13,11 @@
     src: url(./Fonts/Kajiro\ Bold.ttf);
 }
 
+@font-face {
+    font-family: GSB;
+    src: url(./Fonts/Gilroy-SemiBold.ttf);
+}
+
 
 *{
     margin: 0;
@@ -23,27 +28,33 @@
 html,body{
     width: 100%;
     height: 100%;
+    font-family: "GM";
 }
 
 #main{
     width: 100%;
     height: 100vh;
-    background-color: black;
 }
 
 #back{
     width: 100%;
     height: 100vh;
-    background-color: rgb(250, 113, 34);
+}
+
+#back img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 
 #top{
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 0, 0); */
 }
 
 #workingarea{
@@ -51,7 +62,7 @@ html,body{
     width: 80%;
     height: 100vh;
     max-width: 1920px;
-    border: 1px dotted red;
+    /* border: 1px dotted red; */
     position: relative;
 }
 
@@ -75,8 +86,9 @@ nav img{
 }
 
 nav a{
+    pointer-events: all;
     color: white;
-    font-family: "GM";
+    font-family: "GSB";
     text-decoration: none;
     text-transform: uppercase;
     font-size: 13px;
@@ -105,13 +117,21 @@ nav a{
 }
 
 #heroleft .elem{
+    position: relative;
     height: 7vw;
     overflow: hidden;
     /* background-color: red; */
 
 }
 
+#heroleft .elem h1:nth-child(1){
+    top: 0;
+}
+
 #heroleft .elem h1{
+    position: absolute;
+    top: 100%;
+    left: 0;
     line-height: .9;
     font-family: "KJ";
     color: white;
@@ -121,13 +141,45 @@ nav a{
 }
 
 #heroleft button{
+    cursor: pointer;
+    pointer-events: all;
     padding :0.5vw 2vw;
     margin-top: 2vw;
     font-size: 3vw;
     font-family: "KJ";
+    border:  none;
+    
+}
+
+#heroleft button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 #heroright{
-    min-width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 17%;
     color: white;
+}
+
+
+#heroright p{
+    text-align: right;
+    font-size: 14px;
+}
+
+#heroright #image{
+    width: 100%;
+    height: 170px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-image: url(https://images.unsplash.com/photo-1527203561188-dae1bc1a417f?q=80&w=1015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position:center;
+}
+
+#heroright p:nth-child(3){
+    margin-bottom: 100px;
 }
